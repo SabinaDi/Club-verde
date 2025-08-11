@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+   <header class="header">
+
+        
+<!-- Logo--------------- -->
+
+    <div class="logo_section">
+      <a href="#">
+        <img class="logopic" src="../media/logo.jpg" alt="logo">
+      </a>
+      <h1 class="site_name">Club Verde</h1>
+    </div> 
+
+
+ <nav>
+      <ul class="menu">
+        <li><a href="/index.html">Sobre nosotros</a></li>
+        <li><a href="../navegacion/cuidado de las plantas.html">Cuidado de las plantas</a></li>
+        <li><a href="../navegacion/productos.html">Productos</a></li>
+        <li><a href="../navegacion/unete al club.html">Únete al club</a></li>
+      </ul>
+ </nav>
+    </header>
+
+    <main>
+
+        <h2> Únete al Club Verde </h2>
+        <p>Recibe consejos exclusivos, promociones especiales y novedades verdes directamente en tu correo. ¡Es gratis!</p>
+
+        <form action="/submit" method="post">
+         <div class="question">
+        <label for="name">Nombre completo:</label>
+         <div class="option">
+          <input type="text" name="name" id="name">
+         </div>
+        </div>
+
+            <div class="question">
+            <label for="gender">Genero:</label>
+            <div class="option">
+            <select name="gender" id="gender">
+             <option value="">Selecciona</option>
+             <option value="mujer">Mujer</option>
+             <option value="hombre">Hombre</option>
+             <option value="otro">Prefiero no decir</option>
+            </select>
+             </div>
+           </div>
+             
+            <div class="question">
+            <label for="email">Correo electrónico:</label>
+             <div class="option">
+            <input type="email" name="email" id="email" placeholder="email@mail.com">
+             </div>
+            </div>
+
+            <div class="question">
+            <label>¿Qué tipo de plantas te interesan?</label>
+            <small>(Selecciona todas las que apliquen)</small>
+            <div class="option">
+            <input type="checkbox" name="plantas_interes" id="">
+            <label for="suculentas">Suculentas y cactus</label>
+            </div>
+            
+            <div class="option">
+            <input type="checkbox" name="plantas_interes" id="">
+            <label for="">Plantas colgantes</label>
+            </div>
+
+            <div class="option">
+            <input type="checkbox" name="plantas_interes" id="">
+            <label for="">Plantas grandes de interior</label>
+            </div>
+            
+            <div class="option">
+            <input type="checkbox" name="plantas_interes" id="">
+            <label for="">Plantas para oficina</label>
+            </div>
+
+            <div class="option">
+            <input type="checkbox" name="plantas_interes" id="">
+            <label for="">No estoy seguro, ¡quiero aprender!</label>
+            </div>
+          </div>
+
+           <div class="question">
+            <label>Nivel de experiencia con plantas:</label>
+            <small>(Selecciona una opción)</small>
+
+            <div class="option">
+            <input type="radio" name="nivel_de_experencia" id="">
+            <label for="principiante">Principiante</label>
+            </div>
+        
+            <div class="option">
+            <input type="radio" name="nivel_de_experencia" id="">
+            <label for="">Intermedio</label>
+            </div>
+
+            <div class="option">
+            <input type="radio" name="nivel_de_experencia" id="">
+            <label for="">Experto</label>
+            </div>
+        </div>
+
+            <div class="question">
+            <input type="checkbox" name="ofertas" id="">
+            <label for="">¿Deseas recibir nuestras ofertas especiales?</label>
+            </div>
+
+            <div class="question">
+            <label for="comment">Comentarios o preguntas (opcional):</label>
+            <div class="option">
+            <textarea name="message" id="message"></textarea>
+            </div>
+        </div>
+
+            <button type="submit"> ¡Unirme al Club!</button> 
+            </form>
+        
+
+    </main>
+
+ <footer>
+     <p>&copy; 2025 Club Verde. All rights reserved. </p>
+    <nav class="privacidad">
+         <a href="#">Política de privacidad</a>
+         <a href="#">Carrera con nosotros</a>
+         <a href="#">Contactos</a>
+    </nav>
+
+    <div class="contacts">
+     <p>Phone: <a href="tel:+529991234567">+52 (999) 123-45-67</a></p>
+     <p>Email: <a href="mailto:info@company.ru">info@company.ru</a> </p>
+    </div>
+
+    <div class="socials">
+        <a href="#"><img src="../media/vk.jpg" alt="vk"></a>
+        <a href="#"><img src="../media/whatsapp.avif" alt="whatsapp"></a>
+        <a href="#"><img src="../media/ig.jpg" alt="ig"></a>
+     </div>
+ </footer>
+    
+</body>
+</html>
