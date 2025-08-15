@@ -4,62 +4,113 @@
   box-sizing: border-box;
 }
 
-header {
-  padding: 16px 32px;
-  background-color: #ECF87F;
-  border-bottom: 1px solid #ddd;
-  font-family: "Comfortaa", sans-serif;
-  font-weight: bold;
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
 
-nav {
-  width: 100%;
-}
-
-.logopic {
-  width: 110px;
-  height: auto;
-}
-
-.logo_section {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.site_name {
-  font-size: 48px;
-  color: #5ea219;
+body {
   margin: 0;
-  font-family: "Comfortaa", sans-serif;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+}
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bold;
+}
+
+.navheader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
 }
 
 .menu {
-  font-size: 18px;
-  color: #26400c;
-  margin: 0;
-  padding: 0;
   list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  font-family: "Comfortaa", sans-serif;
 }
 
-.menu li a {
+.menu a {
   text-decoration: none;
-  color: #3D550C;
-  padding: 8px 12px;
+  color: #F2E437;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.5rem 0;
+  display: inline-block;
+  
 }
+
+.gridheader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "headerimg1 headerimg1"
+    "headerimg2 headerimg3";
+  gap: 0;
+  grid-template-rows: 300px 200px;
+}
+
+.itemheader {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+
+.itemheader img {
+  width: 100%;
+  height: 100%;  /* чтобы растягивалась и по высоте */
+  object-fit: cover; /* чтобы картинка не искажалась и заполняла ячейку */
+  display: block;
+}
+
+.headerimg1 {
+  grid-area: headerimg1 ;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.headerimg2 {
+  grid-area: headerimg2;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.headerimg3 {
+  grid-area: headerimg3;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.itemheader .title {
+  position: absolute;
+  top: 50%;              /* по центру вертикально */
+  left: 50%; 
+  text-align: center;
+  transform: translate(-50%, -50%); /* смещение в центр */
+  font-size: 4rem;
+  color: #D3C02F;
+  background: rgba(0,0,0,0.3); 
+}
+
 
 p {
   font-size: 18px;
-  color: #404235;
+  color: #ffffff;
   font-family: "Comfortaa", sans-serif;
   line-height: 1.5;
 }
@@ -73,8 +124,8 @@ p {
 h2, h3 {
   font-family: "Comfortaa", sans-serif;
   font-weight: bold;
-  color: #3D550C;
-  text-shadow: 2px 2px 3px rgba(25, 136, 247, 0.8);
+  color: #D3C02F;
+  text-shadow: 2px 2px 3px rgba(247, 80, 25, 0.8);
 }
 
 h2 {
@@ -88,7 +139,7 @@ h3 {
 }
 
 main {
-  background-color: #81B622;
+  background-color: #104210;
   padding: 16px 32px;
   border-bottom: 1px solid #ddd;
 }
@@ -112,51 +163,96 @@ main {
   margin: 30px;
 }
 
-.socials img {
-  max-width: 80px;
-  height: auto;
-  display: inline-block;
-  margin-left: 12px;
-}
-
-.socials {
-  text-align: right;
-  padding: 10px 0;
-}
+/* FOOTER */
 
 footer {
-  background-color: #3D550C;
-  font-size: 18px;
-  color: #ECF87F;
-  padding: 16px 32px;
-  border-top: 1px solid #ddd;
-  font-family: "Comfortaa", sans-serif;
-  font-weight: bold;
+  position: relative;
+  background-image: url(./media/item1.jpg);
+  display: flex;
+  flex-wrap: wrap; /* чтобы на мобильных переносилось */
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 40px; /* вместо фиксированной высоты */
+  gap: 40px; /* grid-gap уже устарел */
+  line-height: 1.6;
 }
 
-footer a {
+footer, 
+footer a, 
+footer p, 
+footer li {
+  font-size: 18px;       
+  font-weight: 700;     
+  font-family: "Comfortaa", sans-serif;
+  color: #D3C02F;
   text-decoration: none;
-  color: inherit;
 }
 
-footer p {
-  font-size: 18px;
-  color: #ECF87F;
-  font-family: "Comfortaa", sans-serif;
-  font-weight: bold;
+footer ul {
+  list-style: none;
   margin: 0;
+  padding: 0;
+
 }
 
-.privacidad a {
-  padding: 8px 16px;
-  margin-left: 0;
+.privacidad {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+  flex-direction: column;
+  font-weight: bold;
 }
+
+.privacidad_item {
+  font-weight: bold;
+}
+
+
+.socials ul {
+  display: flex;
+  margin-left: 40px;
+  flex-direction: row;
+  padding-right: 80px;
+  padding-top: 30px;
+  
+}
+
+.socials img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+
+.contact_item a {
+  text-decoration: none;
+  color: #D3C02F;
+}
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+
 
 form {
   max-width: 500px;
   margin: 0 auto;
   font-size: 18px;
-  color: #404235;
+  color: #D3C02F;
   font-family: "Comfortaa", sans-serif;
 }
 
@@ -187,6 +283,7 @@ button {
   font-family: "Comfortaa", sans-serif;
   font-weight: bold;
 }
+
 
 .contenedor {
   display: grid;
@@ -250,10 +347,12 @@ button {
   "tituloh2_pr tituloh2_pr tituloh2_pr"
   "gridpr1 tituloh3_pr text1_pr"
   "tituloh32_pr text2_pr gridpr2"
-  "tituloh33_pr gridpr3 text3_pr";
+  "tituloh33_pr gridpr3 text3_pr"
+  "tituloh34_pr tituloh34_pr tituloh34_pr"
+  "carousel carousel carousel";
 
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   gap: 30px 0px;
   justify-items: center;
   align-items: center;
@@ -290,11 +389,21 @@ button {
 .tituloh2_pr {
   grid-area: tituloh2_pr;
 }
-
+.tituloh34_pr {
+  grid-area: tituloh34_pr;
+}
+.carousel {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-area: carousel;
+}
 
 /* media queries */
 
 @media (max-width: 480px) {
+
+  /* header */
   header .logo_section {
     flex-direction: column;
     align-items: center;
@@ -306,6 +415,8 @@ button {
   nav {
     width: 100%;
   }
+
+  /* sobre nosotros */
 
   .contenedor {
     grid-template-areas:
@@ -351,11 +462,6 @@ button {
     font-size: 15px;
   }
 
-  footer {
-    font-size: 15px;
-    text-align: center;
-  }
-
   .picture2 {
     width: 80%;
     margin: 0 auto;
@@ -367,7 +473,8 @@ button {
     margin: 0 auto;
   }
 
- .contenedor_productos {
+  /* productos */
+  .contenedor_productos {
     grid-template-areas:
       "tituloh2_pr"
       "tituloh3_pr"
@@ -378,8 +485,104 @@ button {
       "text2_pr"
       "tituloh33_pr"
       "gridpr3"
-      "text3_pr";
+      "text3_pr"
+      "tituloh34_pr"
+      "carousel";
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
+
+  .gridpr1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .gridpr2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .gridpr3 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .contact_item {
+    text-align: center;
+  }
+
+/* footer */
+  footer {
+    text-align: center;
+    display: block;
+  }
+
+  /* cuidado de las plantas */
+  .video {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+
+  /* sobre nosotros */
+
+  .contenedor {
+    grid-template-areas:
+      "tituloh2"
+      "tituloh3"
+      "text1"
+      "picture2"
+      "tituloh32"
+      "map"
+      "maptext";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .picture1 {
+    display: none;
+  }
+  .site_name {
+    font-size: 36px;
+  }
+
+    /* productos */
+  .contenedor_productos {
+    grid-template-areas:
+      "tituloh2_pr"
+      "tituloh3_pr"
+      "gridpr1"
+      "text1_pr"
+      "tituloh32_pr"
+      "gridpr2"
+      "text2_pr"
+      "tituloh33_pr"
+      "gridpr3"
+      "text3_pr"
+      "tituloh34_pr"
+      "carousel";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gridpr1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .gridpr2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .gridpr3 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .contact_item {
+    text-align: center;
+  }
+
 }
