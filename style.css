@@ -76,6 +76,8 @@ h1 {
   display: block;
 }
 
+/* Commit 1: placeholder comment */
+
 .headerimg1 {
   grid-area: headerimg1 ;
   width: 100%;
