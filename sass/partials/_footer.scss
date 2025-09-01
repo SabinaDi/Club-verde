@@ -1,0 +1,82 @@
+@use "variables" as *;
+
+footer {
+    position: relative;
+    background-image: url(../media/item1.jpg);
+    display: flex;
+    flex-wrap: wrap; /* чтобы на мобильных переносилось */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 40px; /* вместо фиксированной высоты */
+    gap: 40px; /* grid-gap уже устарел */
+    line-height: 1.6;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .privacidad {
+        display: flex;
+        list-style-type: none;
+        gap: 10px;
+        flex-direction: column;
+        font-weight: bold;
+
+        .privacidad_item {
+            font-weight: bold;
+        }
+    }
+
+    .socials ul {
+        display: flex;
+        margin-left: 40px;
+        flex-direction: row;
+        padding-right: 80px;
+        padding-top: 30px;
+
+    
+
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    }
+    .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+    }
+
+
+    .contact_info {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+
+        .contacts {
+            list-style: none; 
+            margin: 0;
+            padding: 0;
+
+            .contact_item a {
+                text-decoration: none;
+                color: $nav-link-color;
+            }
+        }
+    }
+}
+
+    footer,
+    footer a,
+    footer p,
+    footer li { 
+        font-size: 18px;       
+        font-weight: 700;     
+        font-family: $main-text-font;
+        color:$nav-link-color;
+        text-decoration: none; 
+    }

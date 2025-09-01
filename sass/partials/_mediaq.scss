@@ -1,0 +1,186 @@
+@media (max-width: 480px) {
+
+  /* header */
+  .navheader {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+      .menu {
+        font-size: 13px;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 10px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+  }
+
+
+   .title {
+    font-size: 36px;
+    top: 70%;
+
+  }
+
+  /* sobre nosotros */
+
+  .contenedor {
+    grid-template-areas:
+      "tituloh2"
+      "tituloh3"
+      "text1"
+      "picture2"
+      "tituloh32"
+      "map"
+      "maptext";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    .picture1 {
+        display: none;
+    }
+    .picture2 {
+        width: 80%;
+        margin: 0 auto;
+    }
+  }
+
+
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .map {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+   /* productos */
+  .contenedor_productos {
+    grid-template-areas:
+      "tituloh2_pr"
+      "tituloh3_pr"
+      "gridpr1"
+      "text1_pr"
+      "tituloh32_pr"
+      "gridpr2"
+      "text2_pr"
+      "tituloh33_pr"
+      "gridpr3"
+      "text3_pr"
+      "tituloh34_pr"
+      "carousel";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gridpr1 {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .gridpr2 {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .gridpr3 {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .contact_item {
+    text-align: center;
+  }
+  .carousel {
+    width: 70% !important;
+  }
+
+/* footer */
+  footer {
+    text-align: center;
+    display: block;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+
+  /* sobre nosotros */
+
+  .contenedor {
+    grid-template-areas:
+      "tituloh2"
+      "tituloh3"
+      "picture1"
+      "text1"
+      "picture2"
+      "tituloh32"
+      "map"
+      "maptext";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .site_name {
+    font-size: 36px;
+  }
+
+    /* productos */
+  .contenedor_productos {
+    grid-template-areas:
+      "tituloh2_pr"
+      "tituloh3_pr"
+      "gridpr1"
+      "text1_pr"
+      "tituloh32_pr"
+      "gridpr2"
+      "text2_pr"
+      "tituloh33_pr"
+      "gridpr3"
+      "text3_pr"
+      "tituloh34_pr"
+      "carousel";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gridpr1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .gridpr2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .gridpr3 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .contact_item {
+    text-align: center;
+  }
+  .carousel {
+    width: 70% !important;
+  }
+
+/* footer */
+  footer {
+    text-align: center;
+    display: block;
+  }
+}
