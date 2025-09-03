@@ -74,7 +74,7 @@ footer {
     footer a,
     footer p,
     footer li { 
-        font-size: 18px;       
+        font-size: $font-size;       
         font-weight: 700;     
         font-family: $main-text-font;
         color:$nav-link-color;

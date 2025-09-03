@@ -1,6 +1,5 @@
 @use "variables" as *;
 
-
 header {
   position: relative;
 
@@ -18,7 +17,7 @@ header {
       gap: 1.5rem;
       margin: 1rem 0;
       font-family: $h-title-font;
-      font-size: 18px;
+      font-size: $font-size;
 
       a {
         text-decoration: none;
@@ -37,10 +36,17 @@ header {
     grid-template-areas:
       "headerimg1 headerimg1"
       "headerimg2 headerimg3";
-    gap: 0;
     grid-template-rows: 300px 200px;
+    gap: 0;
 
     .itemheader {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: block;
+
       img {
         width: 100%;
         height: 100%;
@@ -48,40 +54,25 @@ header {
         display: block;
       }
 
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      display: block;
-      position: relative;
-
       .title {
         position: absolute;
         top: 60%;
         left: 50%;
-        text-align: center;
         transform: translate(-50%, -50%);
-        font-size: $h-title-size;
-        color: $h-title-color;
-        background: rgba(32, 32, 32, 0.5);
-      }
-
-      h1 {
+        text-align: center;
+        font-size: 60px;
         font-family: $h-title-font;
         font-weight: bold;
-        font-size: $h-title-size;
+        color: $h-title-color;
+        background: rgba(32, 32, 32, 0.5);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
       }
     }
 
-    .headerimg1 {
-      grid-area: headerimg1;
-    }
-    .headerimg2 {
-      grid-area: headerimg2;
-    }
-    .headerimg3 {
-      grid-area: headerimg3;
-    }
+    .headerimg1 { grid-area: headerimg1; }
+    .headerimg2 { grid-area: headerimg2; }
+    .headerimg3 { grid-area: headerimg3; }
 
     .headerimg1,
     .headerimg2,

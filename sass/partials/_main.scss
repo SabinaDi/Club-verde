@@ -1,239 +1,243 @@
 @use "variables" as *;
 
 main {
-    background-color: $background-color;
-    padding: 16px 32px;
-    border-bottom: 1px solid #ddd;
+  background-color: $background-color;
+  padding: 16px 32px;
+  border-bottom: 1px solid #ddd;
 }
 
 .contenedor {
-    display: grid;
-    grid-template-areas:
-        "tituloh2 tituloh2 tituloh2"
-        "picture1 tituloh3 tituloh3"
-        "text1 text1 picture2"
-        "tituloh32 tituloh32 tituloh32"
-        "map maptext maptext";
+  display: grid;
+  grid-template-areas:
+    "tituloh2 tituloh2 tituloh2"
+    "picture1 tituloh3 tituloh3"
+    "text1 text1 picture2"
+    "tituloh32 tituloh32 tituloh32"
+    "map maptext maptext";
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: min-content auto min-content auto auto;
+  gap: 20px 30px;
+  justify-items: stretch;
+  align-items: stretch;
 
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: min-content auto min-content auto auto;
-    gap: 20px 30px;
-    justify-items: stretch;
-    align-items: stretch;
+  .tituloh2 {
+    grid-area: tituloh2;
+    font-family: $h-title-font;
+    font-size: $title-size;
+    font-weight: bold;
+    text-shadow: $shadow;
+  }
+  
+  .picture1 {
+    grid-area: picture1;
+    border-radius: 7%;
+  }
+  
+  .tituloh3 {
+    @extend .tituloh2;
+    grid-area: tituloh3;
+    align-self: center;
+  }
 
-    .tituloh2 {
-        grid-area: tituloh2;
-        font-family: $h-title-font;
-        font-size: 32px;
-        font-weight: bold;
-        text-shadow: $shadow;
-    }
-    
-    .picture1 {
-        grid-area: picture1;
-        border-radius: 7%;
-    }
-    
-    .tituloh3 {
-        @extend .tituloh2;
-        grid-area: tituloh3;
-        align-self: center;
+  .text1 {
+    grid-area: text1;
+  }
+  
+  .picture2 {
+    grid-area: picture2;
+    border-radius: 7%;
+    filter: brightness(135%);
+  }
 
-    }
+  .tituloh32 {
+    @extend .tituloh2;
+    grid-area: tituloh32;
+  }
+  
+  .maptext {
+    grid-area: maptext;
+  }
+  
+  .map {
+    grid-area: map;
+    width: 100%;
+    height: 350px;
+    border: 0;
+  }
 
-    .text1 {
-        grid-area: text1;
-    }
-    
-    .picture2 {
-        grid-area: picture2;
-        border-radius: 7%;
-        filter: brightness(135%);
-    }
+  p {
+    font-size: $font-size;
+    color: $main-color-small;
+    font-family: $main-text-font;
+    line-height: 1.5;
+  }
 
-    .tituloh32 {
-        @extend .tituloh2;
-        grid-area: tituloh32;
-    }
-    
-    .maptext {
-        grid-area: maptext;
-    }
-    
-    .map {
-        grid-area: map;
-        width: 100%;
-        height: 350px;
-        border: 0;
-    }
+  h2, h3 {
+    font-family: $h-title-font;
+    color: $h-title-color;
+    text-shadow: $shadow;
+    font-size: $title-size;
+    margin-bottom: 10px;
+  }
 
-    p {
-        font-size: 18px;
-        color: $main-color-small;
-        font-family: $main-text-font;
-        line-height: 1.5;
-    }
-
-    h2, h3 {
-        font-family: $h-title-font;
-        color: $h-title-color;
-        text-shadow: $shadow;
-        font-size: 32px;
-        margin-bottom: 10px;
-    }
-
-
-
-    .picture1, .picture2 {
-        max-width: 100%;
-        height: auto;
-        border-radius: 7%;
-        display: block;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
+  .picture1, .picture2 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 7%;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
-//productos
+// productos
 .contenedor_productos {
-    display: grid;
-    grid-template-areas:
-        "tituloh2_pr tituloh2_pr tituloh2_pr"
-        "gridpr1 tituloh3_pr text1_pr"
-        "tituloh32_pr text2_pr gridpr2"
-        "tituloh33_pr gridpr3 text3_pr"
-        "tituloh34_pr tituloh34_pr tituloh34_pr"
-        "carousel carousel carousel";
+  display: grid;
+  grid-template-areas:
+    "tituloh2_pr tituloh2_pr tituloh2_pr"
+    "gridpr1 tituloh3_pr text1_pr"
+    "tituloh32_pr text2_pr gridpr2"
+    "tituloh33_pr gridpr3 text3_pr"
+    "tituloh34_pr tituloh34_pr tituloh34_pr"
+    "carousel carousel carousel";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 30px; 
+  justify-items: center;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 20px;
 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    gap: 30px 0px;
-    justify-items: center;
-    align-items: center;
+  .imgproductos {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
 
-    .imgproductos {
-        width: 300px;
-        height: auto;
-        margin: 30px;
-    }
+  .gridpr1 { grid-area: gridpr1; }
+  .gridpr2 { grid-area: gridpr2; }
+  .gridpr3 { grid-area: gridpr3; }
 
-    .gridpr1 {
-        grid-area: gridpr1;
-    }
-    .gridpr2 {
-        grid-area: gridpr2;
-    }
-    .gridpr3 {
-        grid-area: gridpr3;
-    }
-    .text1_pr {
-        grid-area: text1_pr;
-        font-family: $main-text-font;
-        color: $main-color-small;
-    }
-    .text2_pr {
-        @extend .text1_pr;
-        grid-area: text2_pr;
-    }
-    .text3_pr {
-        @extend .text1_pr;
-        grid-area: text3_pr;
-    }
-    .tituloh3_pr {
-        grid-area: tituloh3_pr;
-        color: $h-title-color;
-        font-family: $h-title-font;
-        font-weight: $bold;
-        font-size: 32px;
-        text-shadow: $shadow;
+  .text1_pr {
+    grid-area: text1_pr;
+    font-family: $main-text-font;
+    color: $main-color-small;
+    justify-self: start;
+    text-align: left;
+  }
+  .text2_pr {
+    @extend .text1_pr;
+    grid-area: text2_pr;
+  }
+  .text3_pr {
+    @extend .text1_pr;
+    grid-area: text3_pr;
+  }
 
-    }
-    .tituloh32_pr {
-        @extend .tituloh3_pr;
-        grid-area: tituloh32_pr;
-    }
-    .tituloh33_pr {
-        @extend .tituloh3_pr;
-        grid-area: tituloh33_pr;
-    }
-    .tituloh2_pr {
-        @extend .tituloh3_pr;
-        grid-area: tituloh2_pr;
-        
-    }
-    .tituloh34_pr {
-        grid-area: tituloh34_pr;
-        color: $h-title-color;
-        font-family: $h-title-font;
-        font-weight: $bold;
-        font-size: 32px;
+  .tituloh3_pr {
+    grid-area: tituloh3_pr;
+    color: $h-title-color;
+    font-family: $h-title-font;
+    font-weight: $bold;
+    font-size: $title-size;
+    text-shadow: $shadow;
+    justify-self: start;
+    text-align: left;
+  }
+  .tituloh32_pr {
+    @extend .tituloh3_pr;
+    grid-area: tituloh32_pr;
+  }
+  .tituloh33_pr {
+    @extend .tituloh3_pr;
+    grid-area: tituloh33_pr;
+  }
+  .tituloh2_pr {
+    @extend .tituloh3_pr;
+    grid-area: tituloh2_pr;
+    text-align: center;
+    justify-self: center;
+  }
+  .tituloh34_pr {
+    grid-area: tituloh34_pr;
+    color: $h-title-color;
+    font-family: $h-title-font;
+    font-weight: $bold;
+    font-size: $title-size;
+    text-align: center;
+    justify-self: center;
+    text-shadow: $shadow;
+  }
 
-    }
-
-    .carousel { 
-        width: 40%;
-        margin-left: auto; 
-        margin-right: auto; 
-        grid-area: carousel; 
-    }
+  // Carousel
+  .carousel, 
+  .carousel img {
+    grid-area: carousel;
+    width: 55% !important;
+    justify-self: center;
+    height: auto;
+  }
 }
 
-//unete al club  and cuidado
-
+// unete al club
 .unete-main {
-    .text-center {
-        font-size: 32px;
-        color: $h-title-color;
-        font-family: $h-title-font;
-        text-align: center;
-        margin-bottom: 10px;
-        font-weight: bold;
-        text-shadow: $shadow;
-    }
+  .text-center {
+    font-size: $title-size;
+    color: $h-title-color;
+    font-family: $h-title-font;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: $shadow;
+  }
 
-    p {
-        font-size: 18px;
-        color: $main-color-small;
-        font-family: $main-text-font;
-        line-height: 1.5;
-        text-align: stretch;
-    }
-}
+  p {
+    font-size: $font-size;
+    color: $main-color-small;
+    font-family: $main-text-font;
+    line-height: 1.5;
+    text-align: stretch;
+  }
 
-    form {
-        max-width: 500px;
-        text-align: left;
-        margin: 0 auto;
-        font-size: 18px;
-        color: $h-title-color;
-        font-family: $main-text-font;
+  form {
+    max-width: 500px;
+    text-align: left;
+    margin: 0 auto;
+    font-size: $font-size;
+    color: $h-title-color;
+    font-family: $main-text-font;
 
     .question {
-        margin: 20px 0;
+      margin: 20px 0;
     }
 
     button {
-        background-color: #4CAF50;
-        color: $main-color-small;
-        padding: 12px 20px;
-        font-size: 1rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: $main-text-font;
-        font-weight: bold;
+      background-color: #4CAF50;
+      color: $main-color-small;
+      padding: 12px 20px;
+      font-size: $font-size;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: $main-text-font;
+      font-weight: bold;
     }
+  }
 }
 
+// cuidado-main
 .cuidado-main {
-    @extend .unete-main;
+  @extend .unete-main;
 
-    .video {
-        display: flex;             
-        justify-content: center; 
-    }
-    .video iframe {
-        height: 300px;
-        width: 500px;
-    }
+  .video {
+    display: flex;             
+    justify-content: center; 
+    padding: 10px;
+  }
+
+  .video iframe {
+    height: 300px;
+    width: 500px;
+  }
 }
