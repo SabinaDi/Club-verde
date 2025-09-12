@@ -86,10 +86,16 @@
       margin: 0 auto;
     }
 
-    .carousel {
-      width: 100% !important;
-      margin: 0 auto;
+    .carousel img {
+      width: 95%;
     }
+
+    .carousel {
+      width: 95%; 
+    }
+    .carousel-caption {
+    font-size: 15px;  /* уменьшаем текст подписей */ }
+
 
     .tituloh2_pr, .tituloh3_pr, .tituloh32_pr, .tituloh33_pr, .tituloh34_pr {
       font-size: $title-size-ph;
@@ -184,7 +190,8 @@
     }
 
     .carousel {
-      width: 70% !important;
+      width: 70%;
+      height: 100%;
     }
   }
 

@@ -61,7 +61,7 @@ main {
   .map {
     grid-area: map;
     width: 100%;
-    height: 350px;
+    min-height: 350px;
     border: 0;
   }
 
@@ -170,13 +170,22 @@ main {
     text-shadow: $shadow;
   }
 
+
   // Carousel
   .carousel, 
   .carousel img {
     grid-area: carousel;
-    width: 55% !important;
+    width: 55%;
     justify-self: center;
     height: auto;
+  }
+  
+  .carousel-caption h4,
+  .carousel-caption p {
+    display: inline-block;             
+    background-color: rgba(33, 165, 66, 0.5); 
+    border-radius: 6px;                
+    font-weight: bold;
   }
 }
 
@@ -237,7 +246,7 @@ main {
   }
 
   .video iframe {
-    height: 300px;
+    min-height: 300px;
     width: 500px;
   }
 }

@@ -15,10 +15,17 @@ header {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      margin: 1rem 0;
+      margin: 0 auto;
       font-family: $h-title-font;
       font-size: $font-size;
+      padding: 0.5rem 1rem; 
+    }
 
+    .nav-link:hover {
+      background-color: #238d1b; 
+      color: $nav-link-color;
+    }
+      
       a {
         text-decoration: none;
         color: $nav-link-color;
@@ -28,7 +35,8 @@ header {
         display: inline-block;
       }
     }
-  }
+  
+
 
   .gridheader {
     display: grid;

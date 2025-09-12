@@ -17,16 +17,23 @@ footer {
         padding: 0;
     }
 
-    .privacidad {
-        display: flex;
-        list-style-type: none;
-        gap: 10px;
-        flex-direction: column;
-        font-weight: bold;
+@mixin shadow-style ($bg,$lh: normal) {
+    background-color: $bg;
+    width: fit-content;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    line-height: $lh;
 
-        .privacidad_item {
-            font-weight: bold;
-        }
+}
+
+
+    .privacidad {
+        @include shadow-style (rgba(18, 112, 7, 0.5), 2);
     }
 
     .socials ul {
@@ -36,11 +43,9 @@ footer {
         padding-right: 80px;
         padding-top: 30px;
 
-    
-
         img {
             max-width: 100px;
-            max-height: 100px;
+            min-height: 100px;
         }
     }
     .whatsapp {
@@ -52,15 +57,14 @@ footer {
 
 
     .contact_info {
-        display: flex;
         flex-direction: column; 
         justify-content: center;
         align-items: center;
+    
 
         .contacts {
-            list-style: none; 
-            margin: 0;
-            padding: 0;
+            @include shadow-style (rgba(73, 217, 57, 0.5), 3);  
+
 
             .contact_item a {
                 text-decoration: none;
