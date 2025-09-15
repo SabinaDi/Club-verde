@@ -90,4 +90,27 @@ header {
       display: block;
     }
   }
+  /* Стили для иконки гамбургера */
+.navbar-toggler {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 35px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+
+  .toggler-icon {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff; /* полоски белые */
+    border-radius: 2px;
+  }
+}
 }

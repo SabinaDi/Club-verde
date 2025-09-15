@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club Verde</title>
+  <title>Cuidado</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,28 +11,49 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/estilos.css">
 </head>
-<body>
 
+<body>
 <header class="header">
-  <nav class="navheader nav-pills">
+  <!-- Навигация для ПК -->
+  <nav class="navheader nav-pills d-none d-md-block">
     <ul class="menu nav justify-content-center">
       <li class="nav-item"><a class="nav-link" href="../index.html">Sobre nosotros</a></li>
       <li class="nav-item"><a class="nav-link" href="./cuidado.html">Cuidado</a></li>
       <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
+      <li class="nav-item"><a class="nav-link" href="./experencias.html">Experencias</a></li>
       <li class="nav-item"><a class="nav-link" href="./unete al club.html">Únete al club</a></li>
     </ul>
   </nav>
 
+  <!-- Гамбургер только для мобильных -->
+  <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="toggler-icon"></span>
+    <span class="toggler-icon"></span>
+    <span class="toggler-icon"></span>
+  </button>
+
+
+
+  <!-- Мобильное меню -->
+  <div class="collapse bg-custom bg-opacity-95" id="mobileNav">
+    <ul class="navbar-nav bg-dark bg-opacity-75 p-3">
+      <li class="nav-item"><a class="nav-link text-warning" href="/index.html">Sobre nosotros</a></li>
+      <li class="nav-item"><a class="nav-link text-warning" href="/cuidado.html">Cuidado</a></li>
+      <li class="nav-item"><a class="nav-link text-warning" href="/productos.html">Productos</a></li>
+      <li class="nav-item"><a class="nav-link text-warning" href="/experencias.html">Experencias</a></li>
+      <li class="nav-item"><a class="nav-link text-warning" href="/unete al club.html">Únete al club</a></li>
+    </ul>
+  </div>
+
+  <!-- Сетка с картинками -->
   <section class="gridheader">
     <div class="itemheader headerimg1">
       <img src="../media/item1.jpg" alt="">
       <h1 class="title">CLUB VERDE</h1>
     </div>
-
     <div class="itemheader headerimg2">
       <img src="../media/item2.jpeg" alt="">
     </div>
-
     <div class="itemheader headerimg3">
       <img src="../media/item3.jpeg" alt="">
     </div>

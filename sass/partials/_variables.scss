@@ -9,6 +9,11 @@ $background-color: #104210;
 $shadow: 2px 2px 3px rgba(247, 80, 25, 0.8);
 $bold: bold;
 
+.bg-custom {
+  background-color: rgb(0, 255, 13); // Bootstrap
+  opacity: 0.92;
+}
+
 //typography 
 
 $main-text-font: "Comfortaa", sans-serif;
