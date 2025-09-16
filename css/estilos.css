@@ -330,6 +330,18 @@ main {
   width: 500px;
 }
 
+.cardsbs h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #D3C02F;
+  text-shadow: 2px 2px 3px rgba(247, 80, 25, 0.8);
+  font-size: 36px;
+  padding-bottom: 30px;
+  font-size: 36px;
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+}
+
 .be-comment-block .comments-title {
   font-size: 16px;
   color: #262626;
@@ -663,13 +675,13 @@ footer li {
     margin: 0 auto;
   }
   .contenedor_productos .carousel img {
-    width: 95%;
+    width: 100%;
   }
   .contenedor_productos .carousel {
-    width: 95%;
+    width: 100%;
   }
   .contenedor_productos .carousel-caption {
-    font-size: 15px; /* уменьшаем текст подписей */
+    font-size: 10px; /* уменьшаем текст подписей */
   }
   .contenedor_productos .tituloh2_pr, .contenedor_productos .tituloh3_pr, .contenedor_productos .tituloh32_pr, .contenedor_productos .tituloh33_pr, .contenedor_productos .tituloh34_pr {
     font-size: 30px;

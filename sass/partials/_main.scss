@@ -252,6 +252,21 @@ main {
 }
 
 //experencias
+
+.cardsbs {
+  h2{
+    font-family: $h-title-font;
+    color: $h-title-color;
+    text-shadow: $shadow;
+    font-size: $title-size;
+    padding-bottom: 30px;
+    font-size: $title-size;
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
 .be-comment-block {
   .comments-title {
     font-size: 16px;
