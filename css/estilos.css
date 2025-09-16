@@ -746,4 +746,10 @@ footer li {
     text-align: center;
     display: block;
   }
+}
+@media (max-width: 767px) {
+  .card {
+    margin: 1rem 0.7rem 1rem;
+    max-width: 80vw;
+  }
 }/*# sourceMappingURL=estilos.css.map */
