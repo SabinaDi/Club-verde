@@ -68,8 +68,7 @@ header .gridheader .itemheader {
 header .gridheader .itemheader img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 header .gridheader .itemheader .title {
@@ -205,7 +204,6 @@ main {
   justify-items: center;
   align-items: center;
   overflow-x: hidden;
-  padding: 20px;
 }
 .contenedor_productos .imgproductos {
   width: 100%;
@@ -336,7 +334,6 @@ main {
   text-shadow: 2px 2px 3px rgba(247, 80, 25, 0.8);
   font-size: 36px;
   padding-bottom: 30px;
-  font-size: 36px;
   display: flex;
   text-align: center;
   font-weight: bold;
@@ -346,7 +343,7 @@ main {
   font-size: 16px;
   color: #262626;
   margin-bottom: 15px;
-  font-family: "Conv_helveticaneuecyr-bold";
+  font-family: "Comfortaa", sans-serif;
 }
 .be-comment-block .be-comment {
   margin-bottom: 20px;
@@ -367,7 +364,7 @@ main {
 }
 .be-comment-block .be-comment .be-comment-content .be-comment-name {
   font-size: 13px;
-  font-family: "Conv_helveticaneuecyr-bold";
+  font-family: "Comfortaa", sans-serif;
 }
 .be-comment-block .be-comment .be-comment-content .be-comment-name a {
   color: #383b43;
@@ -385,7 +382,7 @@ main {
   line-height: 18px;
   color: #7a8192;
   display: block;
-  background: #f6f6f7;
+  background: #ffffff;
   border: 1px solid #edeff2;
   padding: 15px 20px 20px 20px;
 }
@@ -414,7 +411,7 @@ main {
   width: 48px;
   height: 48px;
   background: #f6f6f7;
-  color: #b5b8c2;
+  color: #D3C02F;
   text-align: center;
   line-height: 50px;
   border-top-left-radius: 2px;
@@ -430,7 +427,9 @@ main {
 
 .card {
   border-radius: 1rem;
-  box-shadow: 0px -10px 0px rgb(151, 248, 6);
+  box-shadow: 0px -10px 0px rgb(242, 255, 2);
+  height: 450px;
+  overflow: hidden;
 }
 .card .card-image img {
   width: 6.2rem;
@@ -448,14 +447,14 @@ main {
   font-size: 1rem;
   margin-bottom: 0;
   font-weight: bold;
-  font-family: "IM Fell French Canon SC";
+  font-family: "Comfortaa", sans-serif;
 }
 .card .people {
   border-top: none;
   text-align: center;
   line-height: 1.2rem;
   padding: 2rem 0 1.4rem 0;
-  font-family: "Varela Round";
+  font-family: "Comfortaa", sans-serif;
 }
 .card .people #name {
   font-size: 0.8rem;
@@ -476,12 +475,6 @@ main {
   padding: 0 0.5rem;
 }
 
-@media (max-width: 767px) {
-  .card {
-    margin: 1rem 0.7rem 1rem;
-    max-width: 80vw;
-  }
-}
 footer {
   position: relative;
   background-image: url(../media/item1.jpg);
@@ -489,8 +482,8 @@ footer {
   flex-wrap: wrap; /* чтобы на мобильных переносилось */
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px 40px; /* вместо фиксированной высоты */
-  gap: 40px; /* grid-gap уже устарел */
+  padding: 20px 40px;
+  gap: 20px;
   line-height: 1.6;
 }
 footer ul {
@@ -500,16 +493,15 @@ footer ul {
 }
 footer .privacidad {
   background-color: rgba(18, 112, 7, 0.5);
-  width: -moz-fit-content;
   width: fit-content;
-  border-radius: 10px;
+  border-radius: 5px;
   flex-direction: column;
   margin: 0 auto;
   padding: 0.5rem 1rem;
   display: flex;
   list-style: none;
   gap: 10px;
-  line-height: 2;
+  line-height: 1.5;
 }
 footer .socials ul {
   display: flex;
@@ -519,12 +511,12 @@ footer .socials ul {
   padding-top: 30px;
 }
 footer .socials ul img {
-  max-width: 100px;
-  min-height: 100px;
+  width: 100px;
+  height: auto;
 }
 footer .whatsapp {
   position: fixed;
-  bottom: 70px;
+  bottom: 40px;
   right: 20px;
   z-index: 1000;
 }
@@ -535,16 +527,15 @@ footer .contact_info {
 }
 footer .contact_info .contacts {
   background-color: rgba(73, 217, 57, 0.5);
-  width: -moz-fit-content;
   width: fit-content;
-  border-radius: 10px;
+  border-radius: 5px;
   flex-direction: column;
   margin: 0 auto;
   padding: 0.5rem 1rem;
   display: flex;
   list-style: none;
   gap: 10px;
-  line-height: 3;
+  line-height: 2;
 }
 footer .contact_info .contacts .contact_item a {
   text-decoration: none;
@@ -640,6 +631,10 @@ footer li {
     font-weight: bold;
     text-decoration: none;
   }
+  .card {
+    height: auto;
+    margin: 1rem 0.7rem 1rem;
+  }
   /* sobre nosotros */
   .contenedor {
     grid-template-areas: "tituloh2" "picture1" "tituloh3" "text1" "picture2" "tituloh32" "map" "maptext";
@@ -714,6 +709,48 @@ footer li {
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
+  .navbar-toggler {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 38px;
+    height: 48px;
+    padding: 0;
+    background: rgba(255, 251, 0, 0.95);
+    border: none;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-toggler .toggler-icon {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin: 20px 0;
+  }
+  #mobileNav {
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    width: 70%;
+    z-index: 15;
+  }
+  #mobileNav .navbar-nav {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  #mobileNav .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+  #mobileNav .navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+  }
   /* sobre nosotros */
   .contenedor {
     grid-template-areas: "tituloh2" "tituloh3" "picture1" "text1" "picture2" "tituloh32" "map" "maptext";
@@ -741,15 +778,15 @@ footer li {
     width: 70%;
     height: 100%;
   }
+  .card {
+    margin: 1rem 0.7rem 1rem;
+    height: auto;
+  }
   /* footer */
   footer {
     text-align: center;
     display: block;
   }
 }
-@media (max-width: 767px) {
-  .card {
-    margin: 1rem 0.7rem 1rem;
-    max-width: 80vw;
-  }
-}/*# sourceMappingURL=estilos.css.map */
+
+/*# sourceMappingURL=estilos.css.map */

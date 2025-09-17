@@ -7,8 +7,8 @@ footer {
     flex-wrap: wrap; /* чтобы на мобильных переносилось */
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px 40px; /* вместо фиксированной высоты */
-    gap: 40px; /* grid-gap уже устарел */
+    padding: 20px 40px; 
+    gap: 20px; 
     line-height: 1.6;
 
     ul {
@@ -20,7 +20,7 @@ footer {
 @mixin shadow-style ($bg,$lh: normal) {
     background-color: $bg;
     width: fit-content;
-    border-radius: 10px;
+    border-radius: 5px;
     flex-direction: column;
     margin: 0 auto;
     padding: 0.5rem 1rem;
@@ -30,10 +30,8 @@ footer {
     line-height: $lh;
 
 }
-
-
     .privacidad {
-        @include shadow-style (rgba(18, 112, 7, 0.5), 2);
+        @include shadow-style (rgba(18, 112, 7, 0.5), 1.5);
     }
 
     .socials ul {
@@ -44,26 +42,23 @@ footer {
         padding-top: 30px;
 
         img {
-            max-width: 100px;
-            min-height: 100px;
+            width: 100px;   
+            height: auto; 
         }
     }
     .whatsapp {
             position: fixed;
-            bottom: 70px;
+            bottom: 40px;
             right: 20px;
             z-index: 1000;
     }
-
-
     .contact_info {
         flex-direction: column; 
         justify-content: center;
         align-items: center;
     
-
         .contacts {
-            @include shadow-style (rgba(73, 217, 57, 0.5), 3);  
+            @include shadow-style (rgba(73, 217, 57, 0.5), 2);  
 
 
             .contact_item a {

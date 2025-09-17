@@ -106,7 +106,6 @@ main {
   justify-items: center;
   align-items: center;
   overflow-x: hidden;
-  padding: 20px;
 
   .imgproductos {
     width: 100%;
@@ -183,7 +182,7 @@ main {
   .carousel-caption h4,
   .carousel-caption p {
     display: inline-block;             
-    background-color: rgba(33, 165, 66, 0.5); 
+    background-color: $bg-color-carousel; 
     border-radius: 6px;                
     font-weight: bold;
   }
@@ -260,7 +259,6 @@ main {
     text-shadow: $shadow;
     font-size: $title-size;
     padding-bottom: 30px;
-    font-size: $title-size;
     display: flex;
     text-align: center;
     font-weight: bold;
@@ -272,7 +270,7 @@ main {
     font-size: 16px;
     color: #262626;
     margin-bottom: 15px;
-    font-family: 'Conv_helveticaneuecyr-bold';
+    font-family: $main-text-font;
   }
 
   .be-comment {
@@ -296,7 +294,7 @@ main {
 
       .be-comment-name {
         font-size: 13px;
-        font-family: 'Conv_helveticaneuecyr-bold';
+        font-family: $main-text-font;
 
         a {
           color: #383b43;
@@ -317,7 +315,7 @@ main {
         line-height: 18px;
         color: #7a8192;
         display: block;
-        background: #f6f6f7;
+        background: #ffffff;
         border: 1px solid #edeff2;
         padding: 15px 20px 20px 20px;
       }
@@ -353,7 +351,7 @@ main {
           width: 48px;
           height: 48px;
           background: #f6f6f7;
-          color: #b5b8c2;
+          color: $h-title-color;
           text-align: center;
           line-height: 50px;
           border-top-left-radius: 2px;
@@ -374,7 +372,9 @@ main {
 
 .card {
   border-radius: 1rem;
-  box-shadow: 0px -10px 0px rgb(151, 248, 6);
+  box-shadow: 0px -10px 0px rgb(242, 255, 2);
+  height: 450px;  // можно поменять под твой макет
+  overflow: hidden; 
 
   .card-image {
     img {
@@ -395,7 +395,7 @@ main {
       font-size: 1rem;
       margin-bottom: 0;
       font-weight: bold;
-      font-family: 'IM Fell French Canon SC';
+      font-family: $main-text-font;
     }
   }
 
@@ -404,7 +404,7 @@ main {
     text-align: center;
     line-height: 1.2rem;
     padding: 2rem 0 1.4rem 0;
-    font-family: 'Varela Round';
+    font-family: $main-text-font;
 
     #name {
       font-size: 0.8rem;
@@ -425,14 +425,8 @@ main {
     }
   }
 }
-
 .col-md-4 {
   padding: 0 0.5rem;
 }
 
-@media (max-width: 767px) {
-  .card {
-    margin: 1rem 0.7rem 1rem;
-    max-width: 80vw;
-  }
-}
+

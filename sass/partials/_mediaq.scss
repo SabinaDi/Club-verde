@@ -70,7 +70,6 @@
       margin: 20px 0; // расстояние между полосками
     }
   }
-
   #mobileNav {
     position: absolute;
     top: 3.5rem;
@@ -93,8 +92,11 @@
       }
     }
   }
-
-
+  //card
+  .card {
+    height: auto; 
+    margin: 1rem 0.7rem 1rem;
+  }
 
   /* sobre nosotros */
   .contenedor {
@@ -212,8 +214,57 @@
 }
 
 // TABLET 481-768px
-@media (min-width: 481px) and (max-width: 768px) {
 
+@media (min-width: 481px) and (max-width: 768px) {
+  //hamburguesa
+  .navbar-toggler {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 38px;
+    height: 48px;
+    padding: 0;
+    background: rgba(255, 251, 0, 0.95);
+    border: none;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .toggler-icon {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #ffffff;// белые полоски
+      border-radius: 2px;
+      margin: 20px 0; // расстояние между полосками
+    }
+  }
+
+  #mobileNav {
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    width: 70%;
+    z-index: 15;
+
+    .navbar-nav {
+      padding: 1rem;
+      background-color: rgba(0,0,0,0.75);
+
+      .nav-item {
+        margin-bottom: 10px;
+
+        .nav-link {
+          color: #ffffff;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   /* sobre nosotros */
   .contenedor {
     grid-template-areas:
@@ -264,18 +315,19 @@
       width: 70%;
       height: 100%;
     }
-  }
+  }   
+    .card {
+      margin: 1rem 0.7rem 1rem;
+      height: auto; 
+    }
 
   /* footer */
   footer {
     text-align: center;
     display: block;
   }
+
 }
 
-  @media (max-width: 767px) {
-  .card {
-    margin: 1rem 0.7rem 1rem;
-    max-width: 80vw;
-  }
-}
+
+
