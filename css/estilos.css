@@ -681,7 +681,7 @@ footer li {
     width: 100%;
   }
   .contenedor_productos .carousel-caption {
-    font-size: 10px; /* уменьшаем текст подписей */
+    font-size: 15px;
   }
   .contenedor_productos .tituloh2_pr, .contenedor_productos .tituloh3_pr, .contenedor_productos .tituloh32_pr, .contenedor_productos .tituloh33_pr, .contenedor_productos .tituloh34_pr {
     font-size: 30px;
