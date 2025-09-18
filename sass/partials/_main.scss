@@ -46,6 +46,8 @@ main {
   .picture2 {
     grid-area: picture2;
     border-radius: 7%;
+    min-width: 250px;
+    height: auto;
     filter: brightness(135%);
   }
 
@@ -373,7 +375,7 @@ main {
 .card {
   border-radius: 1rem;
   box-shadow: 0px -10px 0px rgb(242, 255, 2);
-  height: 450px;  // можно поменять под твой макет
+  height: 450px;  
   overflow: hidden; 
 
   .card-image {

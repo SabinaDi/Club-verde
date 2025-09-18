@@ -68,7 +68,8 @@ header .gridheader .itemheader {
 header .gridheader .itemheader img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 header .gridheader .itemheader .title {
@@ -159,6 +160,8 @@ main {
 .contenedor .picture2 {
   grid-area: picture2;
   border-radius: 7%;
+  min-width: 250px;
+  height: auto;
   filter: brightness(135%);
 }
 .contenedor .tituloh32 {
@@ -493,6 +496,7 @@ footer ul {
 }
 footer .privacidad {
   background-color: rgba(18, 112, 7, 0.5);
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   flex-direction: column;
@@ -527,6 +531,7 @@ footer .contact_info {
 }
 footer .contact_info .contacts {
   background-color: rgba(73, 217, 57, 0.5);
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   flex-direction: column;
@@ -787,6 +792,4 @@ footer li {
     text-align: center;
     display: block;
   }
-}
-
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */
